@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: codica_test_2_development
+
+test:
+  <<: *default
+  database: codica_test_2_test
+
+production:
+  <<: *default
+  database: codica_test_2_production
+  username: codica_test_2
+  password: <%= ENV['CODICA_TEST_2_DATABASE_PASSWORD'] %>
