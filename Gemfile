@@ -20,6 +20,11 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'rack-cors'
 
+# image uploading
+gem 'carrierwave-base64'
+gem "mini_magick"
+gem 'carrierwave-aws'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.7'
