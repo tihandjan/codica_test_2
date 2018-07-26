@@ -1,6 +1,7 @@
 class Api::V1::CategoriesBooksController < ApplicationController
     before_action :check_permission, only: [:create, :destroy]
     before_action :set_cb, only: [:destroy]
+    load_and_authorize_resource 
 
     def create
         categories_book = CategoriesBook.new categories_book_params

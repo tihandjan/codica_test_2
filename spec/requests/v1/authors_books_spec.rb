@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Authors Books API' do
     describe 'Authors Books' do
-        let(:valid_headers)   { create(:user).create_new_auth_token }
+        let!(:valid_headers)   { create(:admin_user).create_new_auth_token }
         let(:invalid_headers) {
             headers = create(:user).create_new_auth_token
             headers['access-token'] = 'fake token'

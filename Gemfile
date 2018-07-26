@@ -25,6 +25,10 @@ gem 'carrierwave-base64'
 gem "mini_magick"
 gem 'carrierwave-aws'
 
+# permissions
+gem 'cancancan'
+gem 'rolify'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.7'

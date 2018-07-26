@@ -1,5 +1,6 @@
 class Api::V1::BooksController < ApplicationController
     before_action :check_permission, only: [:create]
+    load_and_authorize_resource 
 
     def index
         render json: Book.all

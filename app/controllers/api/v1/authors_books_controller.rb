@@ -1,6 +1,7 @@
 class Api::V1::AuthorsBooksController < ApplicationController
     before_action :check_permission, only: [:create, :destroy]
     before_action :set_ab, only: [:destroy]
+    load_and_authorize_resource 
 
     def create
         authors_book = AuthorsBook.new authors_book_params
